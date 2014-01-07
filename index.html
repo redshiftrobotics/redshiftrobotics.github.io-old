@@ -2,11 +2,17 @@
 <html>
 	<head>
 		<style>
-			body
+			h1, h2, h3, h4, h5, p
 			{
-				background-image: url("http://www.nasa.gov/centers/goddard/images/content/96299main_SuperNova2B.jpg");
-				background-repeat:repeat;
-				background-size: 100%;
+				text-shadow: 0px 0px 1em rgb(255, 255, 255);
+				color: rgb(255, 255, 221);
+				text-align: center;
+				font-family:"governor", Sans-Serif;
+			}
+
+			body 
+			{
+				background-color: black;
 			}
 			.scroll 
 			{
@@ -24,26 +30,31 @@
 			    -ms-transition: all .5s linear;
 			    -kthtml-transition: all .5s linear;
 			    transition: all .5s linear;
+
+			    box-shadow: 10px 10px 50px #888888;
 			}
 			.scroll:hover 
 			{
 				opacity:1;
-			    box-shadow: 20px 20px 100px #888888;
+			    box-shadow: 10px 10px 100px #888888;
 			}
 
 			</style>
 	</head>
 	<body>
-		<a href = "http://easyc.saasrobotics.com"><img class ="scroll" src = "img/easyc.jpg"/></a>
-		<a href = "http://notebook.saasrobotics.com"><img class ="scroll" src = "img/notebook.jpg"/></a>
+		<h1>SAAS Robotics</h1>
+		<h5>EasyC</h5>
+		<a class = "imageanchor" href = "http://easyc.saasrobotics.com"><img class ="scroll" src = "img/easyc.jpg"/></a>
+		<h5>Engineering Notebook</h5>
+		<a class = "imageanchor" href = "http://notebook.saasrobotics.com"><img class ="scroll" src = "img/notebook.jpg"/></a>
 	</body>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script>
 
 		function ResizeButtons()
 		{
-			$(".scroll").css({"height" : window.innerHeight / 2.2})
-			$(".scroll").css({"width" : window.innerWidth / 2.2})
+			$(".scroll .imageanchor").css({"height" : window.innerHeight / 2.2});
+			$(".scroll .imageanchor").css({"width" : window.innerWidth / 2.2});
 		}
 
 		$(document).ready(function()
