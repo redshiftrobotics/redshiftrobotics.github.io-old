@@ -24,7 +24,7 @@ gulp.task('js', ['clean:js'], function() {
 		.pipe(browserify({ transform: ['debowerify'], debug: !isDist }))
 		.pipe(isDist ? uglify() : through())
 		.pipe(rename('build.js'))
-		.pipe(gulp.dest('dist/build'))
+		.pipe(gulp.dest('build'))
 		.pipe(connect.reload());
 });
 
@@ -48,13 +48,13 @@ gulp.task('css', ['clean:css'], function() {
 		.pipe(autoprefixer('last 2 versions', { map: false }))
 		.pipe(isDist ? csso() : through())
 		.pipe(rename('build.css'))
-		.pipe(gulp.dest('dist/build'))
+		.pipe(gulp.dest('build'))
 		.pipe(connect.reload());
 });
 
 gulp.task('images', ['clean:images'], function() {
 	return gulp.src('src/images/**/*')
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('images'))
 		.pipe(connect.reload());
 });
 
@@ -85,7 +85,7 @@ gulp.task('clean:images', function() {
 
 gulp.task('connect', ['build'], function(done) {
 	connect.server({
-		root: 'dist',
+		root: '.',
 		livereload: true
 	});
 
