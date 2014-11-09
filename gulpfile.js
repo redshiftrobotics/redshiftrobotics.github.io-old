@@ -98,7 +98,6 @@ gulp.task('watch', function() {
 	gulp.watch('src/images/**/*', ['images']);
 	gulp.watch([
 		'src/scripts/**/*.js',
-		'bespoke-theme-*/*.js' // Allow themes to be developed in parallel
 	], ['js']);
 });
 
