@@ -1,0 +1,21 @@
+{
+  "name": "saasrobotics.github.io",
+  "version": "0.0.0",
+  "homepage": "http://saasrobotics.com/",
+  "authors": [
+    "Alex Jordan <alex@strugee.net>",
+    "Isaac Zinda <isaaczinda@seattleacademy.org>"
+  ],
+  "main": "src/index.jade",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "jquery": "1.10.1"
+  }
+}
