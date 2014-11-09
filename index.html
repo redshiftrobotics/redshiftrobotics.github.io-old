@@ -43,16 +43,5 @@
     <h5>Engineering Notebook</h5><a href="http://notebook.saasrobotics.com" class="imageanchor"><img src="images/notebook.jpg" class="scroll"></a>
   </body>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script>
-    function ResizeButtons()
-    {
-    $(".scroll .imageanchor").css({"height" : window.innerHeight / 2.2});
-    $(".scroll .imageanchor").css({"width" : window.innerWidth / 2.2});
-    }
-    $(document).ready(function()
-    {
-    ResizeButtons();
-    $(window).resize(ResizeButtons());
-    });
-  </script>
+  <script src="build/build.js"></script>
 </html>

@@ -44,14 +44,4 @@ html
 		a.imageanchor(href='http://notebook.saasrobotics.com')
 			img.scroll(src='images/notebook.jpg')
 	script(src='http://code.jquery.com/jquery-1.10.1.min.js')
-	script.
-		function ResizeButtons()
-		{
-		$(".scroll .imageanchor").css({"height" : window.innerHeight / 2.2});
-		$(".scroll .imageanchor").css({"width" : window.innerWidth / 2.2});
-		}
-		$(document).ready(function()
-		{
-		ResizeButtons();
-		$(window).resize(ResizeButtons());
-		});
+	script(src='build/build.js')
