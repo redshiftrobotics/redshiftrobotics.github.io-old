@@ -29,9 +29,9 @@ gulp.task('js', ['clean:js'], function() {
 });
 
 gulp.task('html', ['clean:html'], function() {
-	return gulp.src('src/index.html')
+	return gulp.src('src/index.jade')
 		.pipe(isDist ? through() : plumber())
-		//.pipe(jade({ pretty: true }))
+		.pipe(jade({ pretty: true }))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('.'))
 		.pipe(connect.reload());
